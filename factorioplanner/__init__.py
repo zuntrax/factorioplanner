@@ -1,0 +1,3 @@
+"""
+SFT Factorio factory planner
+"""

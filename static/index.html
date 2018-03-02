@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SFT Factorio planner</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    <body onload="init();">
+        <div class="row">
+            <div class="col3">
+                <h3>Targets</h3>
+                <textarea id="targets"></textarea>
+            </div>
+            <div class="col3">
+                <h3>Recipes</h3>
+                <textarea id="recipes"></textarea>
+            </div>
+            <div class="col3">
+                <h3>External items</h3>
+                <textarea id="externals"></textarea>
+            </div>
+        </div>
+        <div style="padding: 1em; overflow-x: scroll;" id="plan">
+            Loading
+        </div>
+    </body>
+</html>
