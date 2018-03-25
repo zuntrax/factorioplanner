@@ -62,7 +62,7 @@ function update() {
 
     uri = uri.substr(1);
 
-    window.history.pushState({}, "", "/?" + uri);
+    window.history.replaceState({}, "", "/?" + uri);
 
     request.open("GET", "/plan?" + uri);
     request.responseType = "text";
