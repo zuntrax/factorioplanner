@@ -311,7 +311,7 @@ def visualize(target: Dict[str, float], recipes: List[str], external: List[str])
                     with tag("th", rowspan=2): text("Machines")
                     for recipe, machine, _ in recipes_with_rates:
                         with tag("td"):
-                            with tag("select", onchange="replaceMachine(%s, e); return false;" % (dumps(recipe.name),)):
+                            with tag("select", onchange="replaceMachine(%s, this); return false;" % (dumps(recipe.name),)):
                                 for m in recipe.machines:
                                     if m is machine:
                                         with tag("option", value=m.name, selected="selected"):
