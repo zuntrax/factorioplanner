@@ -191,7 +191,8 @@ def visualize(target: Dict[str, float], recipes: List[str], external: List[str])
                 product_set.add(target_item)
                 product_list.append(target_item)
     
-    for recipe in recipes:
+    for recipe_line in recipes:
+        recipe = recipe_line.split("@")[0]
         if recipe not in RECIPES:
             with tag("div", klass="warning"):
                 text("Unknown recipe %r. Did you mean:" % (recipe,))
